@@ -4,7 +4,7 @@ let nDots = 60; //70
 let nLines = 20; //10
 let coupling = 0;
 let spaceWidth = 2;
-let globalGapProbability = 0.2; // Adjust this value for gap prevalence
+let globalGapProbability = 0.1; // Adjust this value for gap prevalence
 let lineWidth = 0.5;
 let initialLineWidth = 0.5;
 
@@ -50,20 +50,14 @@ function move(x, y) {
 }
 
 function mousePressed() {
-  xDisplace = mouseX / width * 100;
-  yDisplace = mouseY / height * 100;
-  redraw(); // Update the state and redraw
+  // Check if the mouse is not on the leftmost edge
+  if (mouseX > 0) {
+    xDisplace = mouseX / width * 100;
+    yDisplace = mouseY / height * 100;
+    redraw(); // Update the state and redraw
+  }
 }
 
-
-
-
-
-function mousePressed() {
-  xDisplace = mouseX / width * 100;
-  yDisplace = mouseY / height * 100;
-  redraw(); // Update the state and redraw
-}
 
 
 function keyPressed() {
