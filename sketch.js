@@ -60,9 +60,9 @@ function mousePressed() {
 
 
 
-function keyPressed() {
-  if (key === 's') {
-    saveCanvas('output', 'png');
-  }
+//function keyPressed() {
+//  if (key === 's') {
+//    saveCanvas('output', 'png');
+//  }
   
-}
+//}
